@@ -40,7 +40,7 @@ app.use('/admin' , adminrouter);
 
 
 //mongodb://localhost:27017/project
-mongoose.connect('mongodb://localhost:27017/Portal', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }, (error, res) => {
+mongoose.connect('mongodb+srv://fixieUser:fixiePassword@cluster0-nvs98.mongodb.net/<dbname>?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }, (error, res) => {
     if (res) {
         console.log('DB1 Connected successfully');
     }
@@ -49,7 +49,7 @@ mongoose.connect('mongodb://localhost:27017/Portal', { useNewUrlParser: true, us
     }
 });
    
-
+app.get('/', (req, res) => res.send('Hello World!'))
 
 app.listen(3000, function () {
     console.log('Server runing on 3000 port');
