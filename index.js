@@ -51,6 +51,6 @@ mongoose.connect('mongodb+srv://fixieUser:fixiePassword@cluster0-nvs98.mongodb.n
    
 app.get('/', (req, res) => res.send('Hello World!'))
 
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
     console.log('Server runing on 3000 port');
 })
