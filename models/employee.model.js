@@ -19,5 +19,5 @@ const employeeschema = mongoose.Schema({
     appliedjobs: [String],
     loggeddate: { type: Date, default: Date.now() }
 });
-const employeemodel = mongoose.model('jobseekers', employeeschema);
+const employeemodel = mongoose.model('employee', employeeschema);
 module.exports = employeemodel;

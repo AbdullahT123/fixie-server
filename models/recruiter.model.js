@@ -12,5 +12,5 @@ const recruiterschema = mongoose.Schema({
     customeraddress: String
 });
 
-const recruitermodel = mongoose.model('jobgivers', recruiterschema);
+const recruitermodel = mongoose.model('recruiter', recruiterschema);
 module.exports = recruitermodel;

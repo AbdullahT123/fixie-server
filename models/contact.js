@@ -7,5 +7,5 @@ const contact98 = mongoose.Schema({
     subject: String
 });
 
-const contact981 = mongoose.model('contact98', contact98);
+const contact981 = mongoose.model('contact', contact98);
 module.exports = contact981;
