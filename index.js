@@ -40,7 +40,7 @@ app.use('/admin' , adminrouter);
 
 
 //mongodb://localhost:27017/project
-mongoose.connect('mongodb+srv://fixieUser:fixieUserPassword@cluster0-it3sl.gcp.mongodb.net/<dbname>?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }, (error, res) => {
+mongoose.connect( process.env.MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }, (error, res) => {
     if (res) {
         console.log('DB1 Connected successfully');
     }
